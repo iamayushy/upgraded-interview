@@ -14,13 +14,13 @@ person.prototype.getfullName = function(){
 function superHero(fname, lname){
     this.isSuperHero = true
 
-    person.call(this, fname, lname)
+    person.call(this, fname, lname) // this will give the functionality of person
 }
 superHero.prototype.fightCrime  = function(){
 
     console.log('Fight Crime')
 }
-superHero.prototype = Object.create(person.prototype)
+superHero.prototype = Object.create(person.prototype) // This is handle methods
 
 const BatMan = new superHero('Kareem' ,  'Khan')
 superHero.prototype.constructor = superHero
